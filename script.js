@@ -28,3 +28,27 @@ revealItems.forEach((item, index) => {
   item.style.transitionDelay = `${Math.min(index % 4, 3) * 90}ms`;
   revealObserver.observe(item);
 });
+const quoteForm = document.querySelector("#contact form");
+const quotePopup = document.getElementById("quote-popup");
+const countdownText = document.getElementById("countdown");
+
+if (quoteForm && quotePopup && countdownText) {
+  quoteForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    quotePopup.style.display = "block";
+
+    let seconds = 5;
+    countdownText.textContent = seconds;
+
+    const timer = setInterval(() => {
+      seconds -= 1;
+      countdownText.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        quoteForm.submit();
+      }
+    }, 1000);
+  });
+}
