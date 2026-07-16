@@ -448,3 +448,31 @@ body {
     min-height: auto;
   }
 }
+.thank-you-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(79, 124, 255, 0.2), transparent 35%),
+    #080b12;
+}
+
+.thank-you-card {
+  width: min(600px, 100%);
+  padding: 50px 30px;
+  text-align: center;
+  border-radius: 28px;
+  background: #111724;
+  border: 1px solid #2c3852;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+}
+
+.thank-you-card h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.thank-you-card p {
+  color: #aeb8ca;
+}
