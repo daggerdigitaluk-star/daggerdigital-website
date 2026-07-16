@@ -214,3 +214,18 @@ details p{color:var(--muted)}
     transform:translateY(-3px);
     box-shadow:0 15px 35px rgba(79,70,229,.5);
 }
+.section.testimonials{
+    text-align:center;
+    padding:100px 5%;
+}
+
+.section.testimonials > h2{
+    text-align:center;
+}
+
+.google-logo{
+    display:block;
+    width:110px;
+    height:auto;
+    margin:24px auto;
+}
