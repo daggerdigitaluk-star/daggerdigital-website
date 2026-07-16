@@ -222,15 +222,8 @@ details p{color:var(--muted)}
 .section.testimonials > h2{
     text-align:center;
 }
-
 .google-logo{
-    display:block;
-    width:110px;
-    height:auto;
-    margin:24px auto;
-}
-.google-logo{
-    width:120px;
+    width:90px;
     height:auto;
     margin:20px auto;
     display:block;
