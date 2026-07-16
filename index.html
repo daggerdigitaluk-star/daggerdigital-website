@@ -34,5 +34,8 @@ const service=document.getElementById('service');document.querySelectorAll('.pac
 const form=document.querySelector('.form'),popup=document.getElementById('popup'),count=document.getElementById('count'),bar=document.getElementById('bar'),cancel=document.getElementById('cancel');let t,sending=false;form.addEventListener('submit',e=>{if(sending)return;e.preventDefault();popup.classList.add('show');let n=5;count.textContent=n;bar.style.width='100%';t=setInterval(()=>{n--;count.textContent=n;bar.style.width=(n/5*100)+'%';if(n<=0){clearInterval(t);sending=true;form.submit()}},1000)});cancel.addEventListener('click',()=>{clearInterval(t);popup.classList.remove('show');bar.style.width='100%'});
 const p=new URLSearchParams(location.search);if(p.get('sent')==='1'){document.getElementById('success').classList.add('show');history.replaceState({},document.title,location.pathname)}
 </script>
+<a href="https://wa.me/447484148117" class="whatsapp-btn">
+  💬
+</a>
 </body>
 </html>
