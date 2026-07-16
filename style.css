@@ -77,6 +77,38 @@ h1,h2,h3{font-family:"Space Grotesk",sans-serif}
 .featured .plan{margin-top:30px}
 
 .reviews-section{background:linear-gradient(145deg,#0b0f18,#101527)}
+.section.testimonials{
+    text-align:center;
+    padding:100px 5%;
+}
+
+.testimonial-card{
+    max-width:600px;
+    margin:40px auto;
+    padding:40px;
+    text-align:center;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+}
+
+.google-review-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:linear-gradient(90deg,#4f46e5,#8b5cf6);
+    color:#fff;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(79,70,229,.35);
+}
+
+.google-review-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(79,70,229,.5);
+}
 .testimonial-card{min-height:280px}
 .stars{color:var(--gold);font-size:1.25rem;letter-spacing:.08em}
 .review-note{color:#7f8ba0;font-size:.86rem}
