@@ -1,9 +1,7 @@
-window.addEventListener("load", () => {
-  setTimeout(() => document.getElementById("loader")?.classList.add("hidden"), 700);
-});
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
+/* ---------- Mobile menu ---------- */
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 
@@ -13,31 +11,41 @@ menuToggle?.addEventListener("click", () => {
 });
 
 nav?.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => nav.classList.remove("open"));
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  });
 });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+/* ---------- Fade-in on scroll ---------- */
+const reveals = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(item => observer.observe(item));
+} else {
+  reveals.forEach(item => item.classList.add("visible"));
+}
 
-document.querySelectorAll(".reveal").forEach(item => observer.observe(item));
-
+/* ---------- Package buttons fill in the form ---------- */
 const serviceSelect = document.getElementById("service-select");
 
 document.querySelectorAll(".package-button, .prefill-button").forEach(button => {
   button.addEventListener("click", () => {
     if (serviceSelect) {
       serviceSelect.value = button.dataset.service || "";
-      setTimeout(() => serviceSelect.focus(), 450);
+      setTimeout(() => serviceSelect.focus({ preventScroll: true }), 450);
     }
   });
 });
 
+/* ---------- Free call modal ---------- */
 const bookingModal = document.getElementById("booking-modal");
 const bookCall = document.getElementById("book-call");
 const bookingToForm = document.getElementById("booking-to-form");
@@ -49,6 +57,9 @@ document.querySelectorAll("[data-close]").forEach(button => {
 bookingModal?.addEventListener("click", event => {
   if (event.target === bookingModal) bookingModal.classList.remove("show");
 });
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") bookingModal?.classList.remove("show");
+});
 
 bookingToForm?.addEventListener("click", () => {
   bookingModal.classList.remove("show");
@@ -56,54 +67,51 @@ bookingToForm?.addEventListener("click", () => {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 });
 
+/* ---------- Quote form: send straight away, stop double clicks ---------- */
 const form = document.querySelector(".contact-form");
-const popup = document.getElementById("quote-popup");
-const countdown = document.getElementById("countdown");
-const progressBar = document.getElementById("progress-bar");
-const cancelSubmit = document.getElementById("cancel-submit");
+const submitButton = document.getElementById("submit-quote");
 
-let timer = null;
-let sending = false;
-
-form?.addEventListener("submit", event => {
-  if (sending) return;
-  event.preventDefault();
-
-  popup.classList.add("show");
-  let seconds = 5;
-  countdown.textContent = seconds;
-  progressBar.style.width = "100%";
-
-  timer = setInterval(() => {
-    seconds -= 1;
-    countdown.textContent = seconds;
-    progressBar.style.width = `${(seconds / 5) * 100}%`;
-
-    if (seconds <= 0) {
-      clearInterval(timer);
-      sending = true;
-      form.submit();
-    }
-  }, 1000);
+form?.addEventListener("submit", () => {
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending…";
+  }
 });
 
-cancelSubmit?.addEventListener("click", () => {
-  clearInterval(timer);
-  popup.classList.remove("show");
-  progressBar.style.width = "100%";
-});
-
+/* ---------- Cookies: Google Analytics only loads after "Accept" ---------- */
+const GA_ID = "G-GS2VE7E183";
 const cookieBar = document.getElementById("cookie-bar");
-if (!localStorage.getItem("dd-cookie-choice")) {
-  cookieBar?.classList.add("show");
+
+function readChoice() {
+  try { return localStorage.getItem("dd-cookie-choice"); } catch (e) { return null; }
+}
+function saveChoice(value) {
+  try { localStorage.setItem("dd-cookie-choice", value); } catch (e) { /* storage blocked */ }
+}
+function loadAnalytics() {
+  if (window.ddAnalyticsLoaded) return;
+  window.ddAnalyticsLoaded = true;
+  const tag = document.createElement("script");
+  tag.async = true;
+  tag.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(tag);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID);
 }
 
+const choice = readChoice();
+if (choice === "accepted") loadAnalytics();
+else if (!choice) cookieBar?.classList.add("show");
+
 document.getElementById("accept-cookies")?.addEventListener("click", () => {
-  localStorage.setItem("dd-cookie-choice", "accepted");
+  saveChoice("accepted");
   cookieBar.classList.remove("show");
+  loadAnalytics();
 });
 
 document.getElementById("decline-cookies")?.addEventListener("click", () => {
-  localStorage.setItem("dd-cookie-choice", "declined");
+  saveChoice("declined");
   cookieBar.classList.remove("show");
 });

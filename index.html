@@ -5,42 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dagger Digital | Websites, Branding & Content</title>
   <meta name="description" content="Dagger Digital creates modern websites, branding, social media content and digital solutions for businesses across the UK.">
-  <meta name="keywords" content="web design Kent, website designer Gravesend, branding, social media promotion, small business websites UK">
   <meta name="author" content="Dagger Digital">
 
   <meta property="og:title" content="Dagger Digital | Websites, Branding & Content">
   <meta property="og:description" content="Professional websites, branding and digital content for ambitious businesses.">
-  <meta property="og:url" content="https://www.daggerdigital.co.uk/">
+  <meta property="og:url" content="https://daggerdigital.co.uk/">
+  <link rel="canonical" href="https://daggerdigital.co.uk/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.daggerdigital.co.uk/dagger-logo.png">
+  <meta property="og:image" content="https://daggerdigital.co.uk/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="dagger-logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS2VE7E183"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GS2VE7E183');
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Dagger Digital","url":"https://daggerdigital.co.uk/","logo":"https://daggerdigital.co.uk/og-image.jpg","image":"https://daggerdigital.co.uk/og-image.jpg","description":"Websites, branding, social media content and website care plans for UK businesses.","telephone":"+447484148117","email":"daggerdigitaluk@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Gravesend","addressRegion":"Kent","addressCountry":"GB"},"areaServed":"GB","sameAs":["https://www.instagram.com/daggerdigital.uk","https://www.facebook.com/DaggerDigitalUK"]}</script>
 </head>
 <body>
-  <div class="loader" id="loader"><img src="dagger-logo.png" alt="Dagger Digital"></div>
-
   <header class="site-header">
-    <a class="brand" href="#home"><img src="dagger-logo.png" alt="Dagger Digital logo"></a>
-    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    <a class="brand" href="#home"><img src="dagger-logo-small.webp" width="72" height="72" alt="Dagger Digital home"></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
       <i class="fa-solid fa-bars"></i>
     </button>
-    <nav class="nav">
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#pricing">Pricing</a>
+      <a href="#care-plans">Care plans</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a class="nav-cta" href="#contact">Get a quote</a>
@@ -62,7 +57,7 @@
         </div>
       </div>
       <div class="hero-visual reveal">
-        <div class="logo-orb"><img src="dagger-logo.png" alt="Dagger Digital"></div>
+        <div class="logo-orb"><img src="dagger-logo.webp" width="520" height="520" alt="Dagger Digital logo" fetchpriority="high"></div>
       </div>
     </section>
 
@@ -82,66 +77,67 @@
     </section>
 
     <section class="section dark-section" id="work">
-      <div class="section-head reveal"><p class="eyebrow">Selected work</p><h2>Clean design. Strong digital presence.</h2></div>
-      <div class="grid grid-3">
-        <article class="project-card reveal"><div class="project-copy"><span>Small Business</span><h3>Business Website Project</h3><p>Replace this example with a real client screenshot and result.</p></div><img src="project1.png" alt="Business website project"></article>
-        <article class="project-card reveal"><div class="project-copy"><span>Branding</span><h3>Brand Identity Project</h3><p>Replace this example with a real logo, colour system and client story.</p></div><img src="project2.png" alt="Brand identity project"></article>
-        <article class="project-card reveal"><div class="project-copy"><span>Content</span><h3>Digital Content Project</h3><p>Replace this example with genuine social posts or video work.</p></div><img src="project3.png" alt="Digital content project"></article>
-      </div>
-    </section>
-
-    <section class="section before-after-section">
-      <div class="section-head reveal"><p class="eyebrow">Before & after</p><h2>See the difference professional design makes.</h2></div>
-      <div class="before-after reveal">
-        <article class="compare-box compare-old"><h3>Before</h3><p>Outdated layout, unclear message and weak mobile experience.</p><div class="compare-art"></div></article>
-        <div class="compare-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <article class="compare-box compare-new"><h3>After Dagger Digital</h3><p>Modern design, stronger branding and clear calls to action.</p><div class="compare-art"></div></article>
-      </div>
+      <div class="section-head reveal"><p class="eyebrow">Recent work</p><h2>Clean design. Strong digital presence.</h2></div>
+      <article class="case-study reveal">
+        <div class="case-copy">
+          <span class="case-tag">Website design &amp; build</span>
+          <h3>En Saver</h3>
+          <p class="case-sub">Energy and business consultancy · Romford</p>
+          <p>A five-page website for an independent consultancy supporting UK businesses with utilities, card payments, EPOS and business advice.</p>
+          <ul class="case-list">
+            <li>Home page plus four service pages</li>
+            <li>Enquiry form that works with email apps and webmail</li>
+            <li>Built mobile-first, with fast-loading images</li>
+            <li>Business details set up for Google</li>
+          </ul>
+          <a class="btn primary prefill-button" href="#contact" data-service="Business Website — £900+">Get a site like this</a>
+        </div>
+        <div class="case-shots">
+          <img class="shot-desktop" src="work-ensaver-desktop.webp" width="1200" height="750" alt="En Saver website home page on a laptop" loading="lazy">
+          <img class="shot-mobile" src="work-ensaver-mobile.webp" width="390" height="844" alt="En Saver website on a phone" loading="lazy">
+        </div>
+      </article>
     </section>
 
     <section class="section" id="pricing">
       
       <div class="section-head reveal"><p class="eyebrow">Website pricing</p><h2>Clear packages for growing businesses.</h2></div>
       <div class="grid grid-3">
-        <article class="card price-card reveal"><p class="plan">Starter Website</p><h3>£350+</h3><ul><li>Up to 3 sections</li><li>Mobile-friendly design</li><li>Contact form</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Starter Website — £199+">Choose Starter</a></article>
-        <article class="card price-card featured reveal"><div class="popular">Most popular</div><p class="plan">Business Website</p><h3>£500+</h3><ul><li>Up to 5 pages</li><li>Custom modern design</li><li>SEO foundations</li></ul><a class="btn primary full package-button" href="#contact" data-service="Business Website — £399+">Choose Business</a></article>
-        <article class="card price-card reveal"><p class="plan">Premium Website</p><h3>£699+</h3><ul><li>Advanced website build</li><li>Custom features</li><li>Priority support</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Premium Website — £699+">Choose Premium</a></article>
+        <article class="card price-card reveal"><p class="plan">Starter Website</p><h3>£600+</h3><ul><li>Up to 3 sections</li><li>Mobile-friendly design</li><li>Contact form</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Starter Website — £600+">Choose Starter</a></article>
+        <article class="card price-card featured reveal"><div class="popular">Most popular</div><p class="plan">Business Website</p><h3>£900+</h3><ul><li>Up to 5 pages</li><li>Custom modern design</li><li>SEO foundations</li></ul><a class="btn primary full package-button" href="#contact" data-service="Business Website — £900+">Choose Business</a></article>
+        <article class="card price-card reveal"><p class="plan">Premium Website</p><h3>£1,200+</h3><ul><li>Advanced website build</li><li>Custom features</li><li>Priority support</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Premium Website — £1,200+">Choose Premium</a></article>
       </div>
     </section>
 
     <section class="section social-pricing">
       <div class="section-head reveal"><p class="eyebrow">Social media support</p><h2>Affordable monthly promotion packages.</h2></div>
       <div class="grid grid-3">
-        <article class="card price-card reveal"><p class="plan">Starter Social</p><h3>£150/month</h3><ul><li>4 posts monthly</li><li>Caption writing</li><li>1 platform</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Starter Social — £150/month">Choose Starter Social</a></article>
-        <article class="card price-card featured reveal"><div class="popular">Best value</div><p class="plan">Growth Social</p><h3>£250/month</h3><ul><li>8 posts monthly</li><li>Captions and hashtags</li><li>2 platforms</li></ul><a class="btn primary full package-button" href="#contact" data-service="Growth Social — £250/month">Choose Growth Social</a></article>
-        <article class="card price-card reveal"><p class="plan">Pro Social</p><h3>£350/month</h3><ul><li>12 posts monthly</li><li>Short-form edits</li><li>Priority changes</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Pro Social — £350/month">Choose Pro Social</a></article>
+        <article class="card price-card reveal"><p class="plan">Starter Social</p><h3>£200/month</h3><ul><li>4 posts monthly</li><li>Caption writing</li><li>1 platform</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Starter Social — £200/month">Choose Starter Social</a></article>
+        <article class="card price-card featured reveal"><div class="popular">Best value</div><p class="plan">Growth Social</p><h3>£350/month</h3><ul><li>8 posts monthly</li><li>Captions and hashtags</li><li>2 platforms</li></ul><a class="btn primary full package-button" href="#contact" data-service="Growth Social — £350/month">Choose Growth Social</a></article>
+        <article class="card price-card reveal"><p class="plan">Pro Social</p><h3>£500/month</h3><ul><li>12 posts monthly</li><li>Short-form edits</li><li>Priority changes</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Pro Social — £500/month">Choose Pro Social</a></article>
+      </div>
+    </section>
+
+    <section class="section" id="care-plans">
+      <div class="section-head reveal"><p class="eyebrow">Website care plans</p><h2>Keep your website running smoothly.</h2></div>
+      <div class="grid grid-3">
+        <article class="card price-card reveal"><p class="plan">Essential Care</p><h3>£35/month</h3><ul><li>Website hosting</li><li>Backups and checks</li><li>Small content updates</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Essential Care Plan — £35/month">Choose Essential</a></article>
+        <article class="card price-card featured reveal"><div class="popular">Recommended</div><p class="plan">Growth Care</p><h3>£75/month</h3><ul><li>Everything in Essential</li><li>More monthly updates</li><li>Faster support</li></ul><a class="btn primary full package-button" href="#contact" data-service="Growth Care Plan — £75/month">Choose Growth</a></article>
+        <article class="card price-card reveal"><p class="plan">Premium Care</p><h3>£150/month</h3><ul><li>Everything in Growth</li><li>Priority support</li><li>Ongoing improvements</li></ul><a class="btn secondary full package-button" href="#contact" data-service="Premium Care Plan — £150/month">Choose Premium</a></article>
       </div>
     </section>
 <section class="section testimonials" id="reviews">
-    <h2>Google Reviews</h2>
-
-    <div class="testimonial-card">
-        <h3>⭐⭐⭐⭐⭐ 5.0 Google Rating</h3>
+      <div class="section-head reveal"><p class="eyebrow">Reviews</p><h2>What clients say on Google.</h2></div>
+      <div class="testimonial-card reveal">
+        <div class="google-badge"><i class="fa-brands fa-google" aria-hidden="true"></i> Google Reviews</div>
+        <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+        <h3>5.0 Google rating</h3>
         <p>Based on 1 Google review.</p>
-
-        <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-            alt="Google"
-            class="google-logo">
-
-        <a href="https://g.page/r/CZR_i5ZZs6BMEAE/review"
-           target="_blank"
-           class="google-review-btn">
-            Leave us a Google Review
-        </a>
-    </div>
-</section>
-
-    <section class="section google-reviews">
-      <div class="google-badge"><i class="fa-brands fa-google"></i> Google Reviews</div>
-      <h2>Build trust with verified Google feedback.</h2>
-      <p>Once your Business Profile receives reviews, add the real quotes above and link customers directly to Google.</p>
-      <a class="btn primary" href="https://www.google.com/search?q=Dagger+Digital" target="_blank" rel="noopener">View Dagger Digital on Google</a>
+        <div class="review-actions">
+          <a class="btn primary" href="https://g.page/r/CZR_i5ZZs6BMEAE/review" target="_blank" rel="noopener">Leave us a Google review</a>
+          <a class="btn secondary" href="https://www.google.com/search?q=Dagger+Digital+Gravesend" target="_blank" rel="noopener">See us on Google</a>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="faq">
@@ -158,8 +154,9 @@
       <div class="contact-copy reveal">
         <p class="eyebrow">Start a project</p><h2>Tell us what you need.</h2>
         <p>Send a few details and Dagger Digital will prepare a tailored quote.</p>
-        <p><strong>Email:</strong> daggerdigitaluk@gmail.com</p>
-        <p><strong>Phone:</strong> <a href="tel:07484148117">07484 148117</a></p>
+        <p><strong>Email:</strong> <a href="mailto:daggerdigitaluk@gmail.com">daggerdigitaluk@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+447484148117">07484 148117</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/447484148117" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
         <p><strong>Location:</strong> Gravesend, Kent • Serving the UK</p>
       </div>
 
@@ -167,7 +164,7 @@
         <input type="hidden" name="_subject" value="New Website Quote - Dagger Digital">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="https://www.daggerdigital.co.uk/thanks.html">
+        <input type="hidden" name="_next" value="https://daggerdigital.co.uk/thanks.html">
         <input type="hidden" name="_autoresponse" value="Thank you for contacting Dagger Digital. We have received your quote request and will reply within 24 hours.">
         <input type="hidden" name="Enquiry Source" value="Dagger Digital Website">
 
@@ -181,25 +178,28 @@
               <option value="">Choose a service or package</option>
               <option>Free Website Audit</option>
               <option>Free 15-Minute Call</option>
-              <option>Starter Website — £400+</option>
-              <option>Business Website — £600+</option>
-              <option>Premium Website — £1000+</option>
-              <option>Starter Social — £150/month</option>
-              <option>Growth Social — £250/month</option>
-              <option>Pro Social — £350/month</option>
+              <option>Starter Website — £600+</option>
+              <option>Business Website — £900+</option>
+              <option>Premium Website — £1,200+</option>
+              <option>Starter Social — £200/month</option>
+              <option>Growth Social — £350/month</option>
+              <option>Pro Social — £500/month</option>
               <option>Logo and branding</option>
               <option>Social media graphics</option>
               <option>Video editing</option>
-              <option>Website maintenance</option>
+              <option>Essential Care Plan — £35/month</option>
+              <option>Growth Care Plan — £75/month</option>
+              <option>Premium Care Plan — £150/month</option>
             </select>
           </label>
           <label class="full-field">Budget
             <select name="Budget" required>
               <option value="">Choose your budget</option>
-              <option>Under £500</option>
-              <option>£500 - £700</option>
-              <option>£800 - £1,000</option>
-              <option>£1,000+</option>
+              <option>Under £600</option>
+              <option>£600 - £900</option>
+              <option>£900 - £1,200</option>
+              <option>£1,200+</option>
+              <option>Monthly plan</option>
             </select>
           </label>
           <label class="full-field">Timeline
@@ -220,13 +220,14 @@
           <label class="full-field">Project details<textarea name="Project Details" rows="6" required></textarea></label>
         </div>
 
-        <button class="btn primary full" type="submit">Request a quote</button>
+        <button class="btn primary full" type="submit" id="submit-quote">Request a quote</button>
+        <p class="form-small">Your details are only used to reply to your enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
       </form>
     </section>
   </main>
 
   <footer class="footer">
-    <img src="dagger-logo.png" alt="Dagger Digital logo">
+    <img src="dagger-logo-small.webp" width="110" height="110" alt="Dagger Digital logo" loading="lazy">
     <p>Websites • Branding • Content</p>
 
     <div class="social-icons">
@@ -247,19 +248,9 @@
   <a class="sticky-quote" href="#contact">Get a Quote</a>
 
   <div class="floating-actions">
-    <a class="float-btn call" href="tel:07484148117" aria-label="Call Dagger Digital"><i class="fa-solid fa-phone"></i></a>
+    <a class="float-btn call" href="tel:+447484148117" aria-label="Call Dagger Digital"><i class="fa-solid fa-phone"></i></a>
     <a class="float-btn email" href="mailto:daggerdigitaluk@gmail.com" aria-label="Email Dagger Digital"><i class="fa-solid fa-envelope"></i></a>
     <a class="float-btn whatsapp" href="https://wa.me/447484148117" target="_blank" rel="noopener" aria-label="WhatsApp Dagger Digital"><i class="fa-brands fa-whatsapp"></i></a>
-  </div>
-
-  <div class="popup-overlay" id="quote-popup">
-    <div class="quote-popup">
-      <div class="popup-icon"><i class="fa-solid fa-check"></i></div>
-      <h2>Quote request ready</h2>
-      <p>Your request will be sent in <strong><span id="countdown">5</span> seconds</strong>.</p>
-      <div class="progress-track"><div id="progress-bar"></div></div>
-      <button class="btn secondary" id="cancel-submit" type="button">Cancel</button>
-    </div>
   </div>
 
   <div class="modal" id="booking-modal">
@@ -272,7 +263,7 @@
   </div>
 
   <div class="cookie-bar" id="cookie-bar">
-    <div><strong>Cookies & analytics</strong><p>This site uses Google Analytics to understand website traffic.</p></div>
+    <div><strong>Cookies & analytics</strong><p>Can we use Google Analytics to see how visitors use this site? It only switches on if you accept. <a href="cookies.html">Cookie policy</a></p></div>
     <div class="cookie-actions">
       <button class="btn secondary" id="decline-cookies" type="button">Decline</button>
       <button class="btn primary" id="accept-cookies" type="button">Accept</button>
