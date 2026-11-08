@@ -1,32 +1,29 @@
-DAGGER DIGITAL WEBSITE - updated 8 Nov 2026
+DAGGER DIGITAL WEBSITE - cinematic redesign (8 Nov 2026)
 
-UPLOAD TO GITHUB
-1. Extract this ZIP.
-2. On GitHub, open your daggerdigital-website repository.
-3. Click "Add file" > "Upload files".
-4. Drag in EVERYTHING from the extracted folder (replace files with the same names).
-5. Click "Commit changes".
-6. Wait 1-3 minutes, then open daggerdigital.co.uk and press Ctrl + F5.
-Optional tidy-up: the old project1.png, project2.png, project3.png and dagger-logo.png are no
-longer used and can be deleted from the repository.
+PREVIEW
+Double-click index.html in this folder. (Needs internet for the fonts.)
 
-WHAT CHANGED
-- Prices made consistent everywhere (cards, buttons and form):
-  Websites £600+ / £900+ / £1,200+   Social £200 / £350 / £500 a month
-- New care plan section: Essential £35, Growth £75, Premium £150 a month (also in the form)
-- Package buttons now fill in the form correctly (Starter and Business buttons were broken)
-- Budget options in the form match the new prices
-- "Selected work" placeholders ("Replace this example...") replaced with the real En Saver project
-- Generic before/after boxes removed (they had no real content)
-- Reviews tidied into one section; the visitor-visible note "add the real quotes above" removed
-- Google Analytics now only loads after a visitor clicks Accept (before, it ran even on Decline)
-- Loading screen removed (it hid the site until everything had loaded, plus 0.7 seconds)
-- 5-second countdown before the quote form sent removed - it now sends straight away
-- Logo 1.4 MB -> 80 KB, plus a proper favicon and a share image for WhatsApp/Facebook links
-- Thank-you page logo was broken (pointed to a missing images folder) - fixed
-- Sitemap fixed (wrong format address, and it used www. while the site runs without www.)
-- Business details added for Google (name, phone, email, Gravesend, social links)
-- Phone: only the WhatsApp button floats on phones now, so it doesn't cover the page
+PUT IT LIVE (GitHub)
+1. Open your daggerdigital-website repository on GitHub.
+2. Add file > Upload files > choose every file in this folder.
+3. Commit changes. Wait 1-3 minutes, then Ctrl + F5 on daggerdigital.co.uk.
 
-FORM
-The form sends enquiries to daggerdigitaluk@gmail.com using FormSubmit.
+WHAT'S NEW
+- Full-screen hero: "We build digital experiences that stand out."
+  with "Start Your Project" and "Explore Our Work"
+- 3D logo: the badge is built as a coin with real thickness. The dagger floats in front,
+  the lettering sits in the middle, and it sways slowly and follows the mouse
+- Moving 3D grid floor behind the hero
+- Scroll animations as each section comes into view
+- Interactive work preview: En Saver in a laptop/phone frame that tilts with the mouse,
+  with a Laptop / Phone switch
+- Glass pricing cards with tabs: Websites / Social media / Care plans
+- "Let's build something great" contact section with a big WhatsApp button,
+  free website audit and free 15-minute call
+- Header turns to frosted glass when you scroll; full-screen menu on phones
+- No Font Awesome any more (icons are built in), so the page loads faster
+- Animations switch off for visitors who have "reduce motion" turned on
+
+UNCHANGED
+- Prices, care plans, FAQ, Google review link, form (FormSubmit to daggerdigitaluk@gmail.com)
+- Google Analytics only loads after a visitor clicks Accept
