@@ -363,3 +363,15 @@ p{margin:0}
 .footer-links a:hover{color:#fff;text-decoration:underline}
 @media (max-width:920px){.split{grid-template-columns:1fr}}
 @media (max-width:640px){.page-hero .hero-actions .btn{flex:1 1 100%}}
+
+/* ---------- Client onboarding form (added Nov 2026) ---------- */
+.onb-wrap{max-width:900px;margin:0 auto}
+.onb fieldset{border:0;margin:0 0 34px;padding:0;min-width:0}
+.onb legend{display:flex;align-items:center;gap:12px;font-family:"Unbounded",sans-serif;font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:18px;padding:0}
+.onb legend span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#3d7bff,#8b5cf6);font-size:.85rem}
+.onb input[type=file]{padding:10px 12px;cursor:pointer}
+.onb input[type=file]::file-selector-button{margin-right:12px;padding:8px 14px;border:0;border-radius:10px;background:rgba(125,157,255,.18);color:#dbe4ff;font-weight:700;cursor:pointer}
+.onb .onb-check{flex-direction:row;align-items:flex-start;gap:12px;font-weight:500}
+.onb .onb-check input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:#3d7bff;padding:0}
+.onb .form-small{margin:6px 0 14px}
+.onb-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
