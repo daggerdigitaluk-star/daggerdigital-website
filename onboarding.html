@@ -48,109 +48,118 @@
     </button>
   </header>
 
-  <main id="main">
-    <section class="page-hero">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Get started</span></nav>
-      <h1>Let's get your project started.</h1>
-      <p class="page-lead">Fill this in once and I'll have everything I need to start building. It takes about 10 minutes. If you don't have something yet, leave it blank and we'll sort it together.</p>
-    </section>
+  <main id="main" class="wiz-page">
+    <form class="wiz" id="wiz" action="https://formsubmit.co/daggerdigitaluk@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New client onboarding - Dagger Digital">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_next" value="https://daggerdigital.co.uk/onboarding-thanks.html">
+      <input type="hidden" name="_autoresponse" value="Thanks for sending your project details to Dagger Digital. I'll look through everything and be in touch within 2 working days. Jake">
+      <input type="text" name="_honey" class="onb-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-    <section class="section onb-wrap">
-      <form class="contact-form onb" action="https://formsubmit.co/daggerdigitaluk@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="New client onboarding - Dagger Digital">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="https://daggerdigital.co.uk/onboarding-thanks.html">
-        <input type="hidden" name="_autoresponse" value="Thanks for sending your project details to Dagger Digital. I'll look through everything and be in touch within 2 working days. Jake">
-        <input type="text" name="_honey" class="onb-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="wiz-top">
+        <div class="wiz-progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="wiz-bar"></span></div>
+        <p class="wiz-count" id="wiz-count" aria-live="polite"></p>
+      </div>
 
-        <fieldset>
-          <legend><span>1</span>About you</legend>
-          <div class="form-grid">
-            <label>Your name<input type="text" name="Client Name" autocomplete="name" required></label>
-            <label>Business name<input type="text" name="Business Name" autocomplete="organization" required></label>
-            <label>Email address<input type="email" name="email" autocomplete="email" required></label>
-            <label>Phone number<input type="tel" name="Phone Number" autocomplete="tel"></label>
-            <label class="full">What have we agreed?
-              <select name="Package Agreed" required>
-                <option value="">Choose your package</option>
-                <option>Starter Website</option>
-                <option>Business Website</option>
-                <option>Premium Website</option>
-                <option>Social media package</option>
-                <option>Logo and branding</option>
-                <option>Care plan only</option>
-                <option>Something else</option>
-              </select>
-            </label>
-          </div>
-        </fieldset>
+      <div class="wiz-steps">
+        <section class="wiz-step wiz-welcome">
+          <p class="wiz-eyebrow">Dagger Digital · New project</p>
+          <h1 class="wiz-title">Let's get your website started.</h1>
+          <p class="wiz-lead">One question at a time. It takes about 10 minutes, and anything you don't have yet you can skip. We'll sort it together.</p>
+          <ul class="wiz-promises"><li>Press <kbd>Enter</kbd> to move on</li><li>Go back any time</li><li>Check everything before you send</li></ul>
+        </section>
+        <section class="wiz-step" data-required>
+          <h2 class="wiz-q">First things first, what's your name?</h2>
+          <label class="wiz-field" for="f-name"><span>Your name</span><input id="f-name" type="text" name="Client Name" placeholder="e.g. Sarah Jones" autocomplete="name" required></label>
+        </section>
+        <section class="wiz-step" data-required>
+          <h2 class="wiz-q">Nice to meet you, <span data-first-name>there</span>! What's your business called?</h2>
+          <label class="wiz-field" for="f-biz"><span>Business name</span><input id="f-biz" type="text" name="Business Name" autocomplete="organization" required></label>
+        </section>
+        <section class="wiz-step" data-required>
+          <h2 class="wiz-q">How can I reach you?</h2><p class="wiz-hint">I'll only use these to talk to you about your project.</p>
+          <div class="wiz-pair"><label class="wiz-field" for="f-email"><span>Email address</span><input id="f-email" type="email" name="email" autocomplete="email" required></label><label class="wiz-field" for="f-phone"><span>Phone number</span><input id="f-phone" type="tel" name="Phone Number" autocomplete="tel"></label></div>
+        </section>
+        <section class="wiz-step" data-required data-auto>
+          <h2 class="wiz-q">Which package have we agreed?</h2>
+          <div class="wiz-cards" role="radiogroup"><label class="wiz-card"><input type="radio" name="Package Agreed" value="Starter Website" required><span class="wiz-card-t">Starter Website</span><span class="wiz-card-s">Up to 3 sections</span></label><label class="wiz-card"><input type="radio" name="Package Agreed" value="Business Website"><span class="wiz-card-t">Business Website</span><span class="wiz-card-s">Up to 5 pages</span></label><label class="wiz-card"><input type="radio" name="Package Agreed" value="Premium Website"><span class="wiz-card-t">Premium Website</span><span class="wiz-card-s">Advanced build</span></label><label class="wiz-card"><input type="radio" name="Package Agreed" value="Social media package"><span class="wiz-card-t">Social media package</span><span class="wiz-card-s">Monthly posts</span></label><label class="wiz-card"><input type="radio" name="Package Agreed" value="Logo and branding"><span class="wiz-card-t">Logo and branding</span><span class="wiz-card-s">Logo, cards, graphics</span></label><label class="wiz-card"><input type="radio" name="Package Agreed" value="Care plan only"><span class="wiz-card-t">Care plan only</span><span class="wiz-card-s">Hosting and updates</span></label><label class="wiz-card"><input type="radio" name="Package Agreed" value="Something else"><span class="wiz-card-t">Something else</span><span class="wiz-card-s">We'll chat about it</span></label></div>
+        </section>
+        <section class="wiz-step" data-required>
+          <h2 class="wiz-q">Do you already own a web address?</h2><p class="wiz-hint">That's the bit like yourbusiness.co.uk. Please don't type any passwords here.</p>
+          <div class="wiz-cards" role="radiogroup"><label class="wiz-card"><input type="radio" name="Owns Domain" value="Yes, I already have one" required><span class="wiz-card-t">Yes, I already have one</span><span class="wiz-card-s">I'll tell you where</span></label><label class="wiz-card"><input type="radio" name="Owns Domain" value="No, please help me get one"><span class="wiz-card-t">No, please help me get one</span><span class="wiz-card-s">I'll sort it for you</span></label><label class="wiz-card"><input type="radio" name="Owns Domain" value="Not sure"><span class="wiz-card-t">Not sure</span><span class="wiz-card-s">We'll check together</span></label></div><div class="wiz-if" data-if="Owns Domain=Yes, I already have one"><div class="wiz-pair"><label class="wiz-field" for="f-dom"><span>Your domain</span><input id="f-dom" type="text" name="Domain Name" placeholder="yourbusiness.co.uk"></label><label class="wiz-field" for="f-reg"><span>Where it's registered</span><input id="f-reg" type="text" name="Domain Registered With" placeholder="e.g. GoDaddy, IONOS"></label></div></div>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Do you have a website at the moment?</h2><p class="wiz-hint">Skip this if you don't.</p>
+          <label class="wiz-field" for="f-cur"><span>Current website</span><input id="f-cur" type="url" name="Current Website" placeholder="https://"></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Got a logo? Pop it in here.</h2><p class="wiz-hint">PNG, JPG or SVG. No logo yet? Just skip, I can design one.</p>
+          <label class="wiz-drop" for="f-logo"><input id="f-logo" type="file" name="Logo" accept="image/png,image/jpeg,image/svg+xml,image/webp"><span class="wiz-drop-icon" aria-hidden="true">&#8679;</span><span class="wiz-drop-t">Upload your logo</span><span class="wiz-drop-f" data-file-for="f-logo">Tap to choose a file</span></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">What colours are your brand?</h2><p class="wiz-hint">If you're not sure, tell me colours you like.</p>
+          <label class="wiz-field" for="f-col"><span>Brand colours</span><input id="f-col" type="text" name="Brand Colours" placeholder="e.g. navy and gold, or #0a2540"></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Any websites you love the look of?</h2><p class="wiz-hint">It helps me get your style right first time.</p>
+          <label class="wiz-field" for="f-like"><textarea id="f-like" name="Websites They Like" rows="3" placeholder="Paste a link or two, and what you like about them"></textarea></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Anything you definitely <em>don't</em> want?</h2>
+          <label class="wiz-field" for="f-avoid"><textarea id="f-avoid" name="Things To Avoid" rows="3" placeholder="e.g. no dark colours, nothing too flashy"></textarea></label>
+        </section>
+        <section class="wiz-step" data-required>
+          <h2 class="wiz-q">In a few sentences, what does <span data-biz>your business</span> do, and who for?</h2>
+          <label class="wiz-field" for="f-about"><textarea id="f-about" name="About The Business" rows="5" placeholder="Write it like you'd explain it to a new customer" required></textarea></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">What services do you offer?</h2><p class="wiz-hint">Example: Ladies' cut and blow-dry, from £35</p>
+          <label class="wiz-field" for="f-serv"><textarea id="f-serv" name="Services And Prices" rows="6" placeholder="One per line, with prices if you'd like them shown"></textarea></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Where do you work, and when?</h2>
+          <div class="wiz-pair"><label class="wiz-field" for="f-area"><span>Areas you cover</span><input id="f-area" type="text" name="Areas Covered" placeholder="e.g. Gravesend, Dartford, Kent"></label><label class="wiz-field" for="f-hours"><span>Opening hours</span><input id="f-hours" type="text" name="Opening Hours" placeholder="e.g. Mon–Fri 9am–5pm"></label></div>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Which contact details should go on the site?</h2>
+          <label class="wiz-field" for="f-show"><textarea id="f-show" name="Contact Details To Show" rows="3" placeholder="Phone, email, address. Only what you're happy for the public to see."></textarea></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Where else can customers find you?</h2>
+          <div class="wiz-pair"><label class="wiz-field" for="f-book"><span>Booking link</span><input id="f-book" type="url" name="Booking Link" placeholder="e.g. Fresha, Treatwell, Calendly"></label><label class="wiz-field" for="f-soc"><span>Social media</span><input id="f-soc" type="text" name="Social Links" placeholder="Instagram, Facebook, TikTok..."></label></div>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Any reviews you'd like to show off?</h2><p class="wiz-hint">Only ones you have permission to use. Skip and I'll use your Google reviews with your OK.</p>
+          <label class="wiz-field" for="f-rev"><textarea id="f-rev" name="Reviews To Use" rows="5" placeholder="Paste them with the customer's first name"></textarea></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">What do customers always ask you?</h2><p class="wiz-hint">These make a great FAQ section.</p>
+          <label class="wiz-field" for="f-faq"><textarea id="f-faq" name="Common Questions" rows="4" placeholder="e.g. Do you do evening appointments? How much is a callout?"></textarea></label>
+        </section>
+        <section class="wiz-step">
+          <h2 class="wiz-q">Now for some photos.</h2><p class="wiz-hint">Up to 3 here, 10 MB in total with your logo. Bigger files can go on WhatsApp to 07484 148117.</p>
+          <div class="wiz-drops"><label class="wiz-drop" for="f-p1"><input id="f-p1" type="file" name="Photo 1" accept="image/*"><span class="wiz-drop-icon" aria-hidden="true">&#8679;</span><span class="wiz-drop-t">Photo 1</span><span class="wiz-drop-f" data-file-for="f-p1">Tap to choose a file</span></label><label class="wiz-drop" for="f-p2"><input id="f-p2" type="file" name="Photo 2" accept="image/*"><span class="wiz-drop-icon" aria-hidden="true">&#8679;</span><span class="wiz-drop-t">Photo 2</span><span class="wiz-drop-f" data-file-for="f-p2">Tap to choose a file</span></label><label class="wiz-drop" for="f-p3"><input id="f-p3" type="file" name="Photo 3" accept="image/*"><span class="wiz-drop-icon" aria-hidden="true">&#8679;</span><span class="wiz-drop-t">Photo 3</span><span class="wiz-drop-f" data-file-for="f-p3">Tap to choose a file</span></label></div><label class="wiz-field" for="f-more"><span>Got more? Share a link</span><input id="f-more" type="url" name="More Photos Link" placeholder="Google Drive, Dropbox or WeTransfer link"></label>
+        </section>
+        <section class="wiz-step" data-required>
+          <h2 class="wiz-q">Last one! Anything else I should know?</h2>
+          <label class="wiz-field" for="f-else"><textarea id="f-else" name="Anything Else" rows="4" placeholder="Deadlines, ideas, things you're excited about..."></textarea></label><label class="wiz-check"><input type="checkbox" name="Permission To Use Content" value="Yes" required><span>I own, or have permission to use, the logo, photos and reviews I'm sending.</span></label>
+        </section>
+        <section class="wiz-step wiz-review-step">
+          <h2 class="wiz-q">All done, <span data-first-name>there</span>! Here's what you've told me.</h2>
+          <p class="wiz-hint">Tap any answer to change it, then send it over.</p>
+          <dl class="wiz-review" id="wiz-review"></dl>
+        </section>
+      </div>
 
-        <fieldset>
-          <legend><span>2</span>Your website address</legend>
-          <div class="form-grid">
-            <label class="full">Do you already own a domain name (e.g. yourbusiness.co.uk)?
-              <select name="Owns Domain">
-                <option>Yes, I already have one</option>
-                <option>No, please help me get one</option>
-                <option>Not sure</option>
-              </select>
-            </label>
-            <label>Domain name, if you have one<input type="text" name="Domain Name" placeholder="yourbusiness.co.uk"></label>
-            <label>Where is it registered?<input type="text" name="Domain Registered With" placeholder="e.g. GoDaddy, IONOS, 123-reg"></label>
-            <label class="full">Current website, if you have one<input type="url" name="Current Website" placeholder="https://"></label>
-          </div>
-          <p class="form-small">Please don't type passwords here. If I need access to anything, I'll ask you to share it safely.</p>
-        </fieldset>
-
-        <fieldset>
-          <legend><span>3</span>Your brand</legend>
-          <div class="form-grid">
-            <label class="full">Your logo (PNG, JPG or SVG)<input type="file" name="Logo" accept="image/png,image/jpeg,image/svg+xml,image/webp"></label>
-            <label class="full">Brand colours<input type="text" name="Brand Colours" placeholder="e.g. navy and gold, or colour codes like #0a2540"></label>
-            <label class="full">Websites you like, and what you like about them<textarea name="Websites They Like" rows="3"></textarea></label>
-            <label class="full">Anything you definitely don't want<textarea name="Things To Avoid" rows="2"></textarea></label>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend><span>4</span>Your business</legend>
-          <div class="form-grid">
-            <label class="full">In a few sentences, what does your business do and who is it for?<textarea name="About The Business" rows="4" required></textarea></label>
-            <label class="full">Your services, with prices if you want them shown<textarea name="Services And Prices" rows="5" placeholder="One per line"></textarea></label>
-            <label>Areas you cover<input type="text" name="Areas Covered" placeholder="e.g. Gravesend, Dartford, Kent"></label>
-            <label>Opening hours<input type="text" name="Opening Hours" placeholder="e.g. Mon–Fri 9am–5pm"></label>
-            <label class="full">Contact details to show on the site<textarea name="Contact Details To Show" rows="2" placeholder="Phone, email, address (only what you're happy to show publicly)"></textarea></label>
-            <label class="full">Booking link, if you use one<input type="url" name="Booking Link" placeholder="e.g. your Fresha, Treatwell or Calendly link"></label>
-            <label class="full">Social media links<textarea name="Social Links" rows="2" placeholder="Instagram, Facebook, TikTok..."></textarea></label>
-            <label class="full">Reviews or testimonials you'd like to use<textarea name="Reviews To Use" rows="3" placeholder="Paste them here, with the customer's first name. Only ones you have permission to use."></textarea></label>
-            <label class="full">Questions customers often ask you<textarea name="Common Questions" rows="3"></textarea></label>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend><span>5</span>Photos</legend>
-          <p class="form-small">Up to 3 photos here, 10 MB in total including your logo. Got more? Put them in a Google Drive, Dropbox or WeTransfer link below, or send them on WhatsApp.</p>
-          <div class="form-grid">
-            <label>Photo 1<input type="file" name="Photo 1" accept="image/*"></label>
-            <label>Photo 2<input type="file" name="Photo 2" accept="image/*"></label>
-            <label>Photo 3<input type="file" name="Photo 3" accept="image/*"></label>
-            <label>Link to more photos<input type="url" name="More Photos Link" placeholder="https://"></label>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend><span>6</span>Anything else</legend>
-          <div class="form-grid">
-            <label class="full">Deadlines, ideas or anything else I should know<textarea name="Anything Else" rows="4"></textarea></label>
-            <label class="full onb-check"><input type="checkbox" name="Permission To Use Content" value="Yes" required><span>I own, or have permission to use, the logo, photos and reviews I'm sending.</span></label>
-          </div>
-        </fieldset>
-
-        <button class="btn btn-glow btn-block" type="submit">Send my project details</button>
-        <p class="form-small">Your details are only used to build your website. See our <a href="privacy.html">privacy policy</a>.</p>
-      </form>
-    </section>
+      <div class="wiz-nav">
+        <button type="button" class="btn btn-ghost wiz-back" id="wiz-back">Back</button>
+        <button type="button" class="btn btn-glow wiz-next" id="wiz-next">Let's go</button>
+        <span class="wiz-enter" id="wiz-enter">or press <kbd>Enter</kbd></span>
+      </div>
+      <button type="submit" class="btn btn-glow btn-block wiz-nojs-submit">Send my project details</button>
+      <p class="form-small wiz-legal">Your details are only used to build your website. See our <a href="privacy.html">privacy policy</a>.</p>
+    </form>
   </main>
 
   <footer class="footer">
@@ -194,5 +203,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="onboarding.js"></script>
 </body>
 </html>
